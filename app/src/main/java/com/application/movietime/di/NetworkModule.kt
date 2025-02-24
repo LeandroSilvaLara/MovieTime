@@ -2,6 +2,8 @@ package com.application.movietime.di
 
 import android.app.Application
 import com.application.moviesapp.BuildConfig
+import com.application.movietime.data.api.MoviesApi
+import com.application.movietime.data.api.NetworkInterceptor
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Named

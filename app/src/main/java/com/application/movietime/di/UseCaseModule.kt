@@ -1,5 +1,7 @@
 package com.application.movietime.di
 import com.application.movietime.data.repository.NotificationPreferenceRepository
+import com.application.movietime.domain.usecase.GetNotificationInteractor
+import com.application.movietime.domain.usecase.NotificationUseCase
 import javax.inject.Named
 import javax.inject.Singleton
 import dagger.Module

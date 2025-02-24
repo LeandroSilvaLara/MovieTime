@@ -1,6 +1,8 @@
 package com.application.movietime.di
 
 import com.application.moviesapp.BuildConfig
+import com.application.movietime.data.api.YoutubeApi
+import com.application.movietime.data.api.YoutubeNetworkInterceptor
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
 import dagger.Provides

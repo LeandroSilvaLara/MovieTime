@@ -3,6 +3,9 @@ package com.application.movietime.di
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.dataStore
+import com.application.moviesapp.UserPreferences
+import com.application.movietime.data.local.proto.UserPreferencesSerializer
+
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

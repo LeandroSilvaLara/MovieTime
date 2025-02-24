@@ -1,6 +1,7 @@
 package com.application.movietime.di
 
 import android.content.Context
+import com.application.movietime.data.local.MoviesDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
