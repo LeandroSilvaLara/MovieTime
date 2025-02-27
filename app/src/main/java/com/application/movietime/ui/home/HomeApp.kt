@@ -114,6 +114,7 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.application.moviesapp.R
+import com.application.moviesapp.UserPreferences
 import com.application.movietime.data.SORT_BY
 import com.application.movietime.data.common.Resource
 import com.application.movietime.data.local.entity.MovieDownloadEntity

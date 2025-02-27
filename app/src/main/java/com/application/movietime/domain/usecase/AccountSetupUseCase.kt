@@ -1,6 +1,7 @@
 package com.application.moviesapp.domain.usecase
 
 import android.net.Uri
+import com.application.moviesapp.UserPreferences
 import com.application.movietime.data.api.request.Member
 import com.application.movietime.data.common.Resource
 import com.application.movietime.data.repository.AccountSetupRepository

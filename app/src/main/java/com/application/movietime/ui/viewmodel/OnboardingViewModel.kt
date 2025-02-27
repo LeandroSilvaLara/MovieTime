@@ -8,6 +8,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.application.moviesapp.UserPreferences
 import com.application.moviesapp.domain.usecase.AccountSetupUseCase
 import com.application.moviesapp.domain.usecase.MovieGenresUseCase
 import com.application.moviesapp.domain.usecase.PasswordResetUseCase

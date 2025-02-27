@@ -3,6 +3,7 @@ package com.application.movietime.ui.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
+import com.application.moviesapp.UserPreferences
 import com.application.moviesapp.domain.usecase.AccountSetupUseCase
 import com.application.moviesapp.domain.usecase.MovieGenresUseCase
 import com.application.moviesapp.domain.usecase.MovieSearchUseCase
