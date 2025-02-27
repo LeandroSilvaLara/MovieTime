@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
+        android:name=".MoviesApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -10,19 +15,157 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MovieTime"
+        android:theme="@style/Theme.MoviesApp.Splash"
         tools:targetApi="31">
+
+        <service
+            android:name=".service.PushNotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT">
+                </action>
+            </intent-filter>
+        </service>
+
+
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.privacypolicy.PrivacyPolicyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name=".ui.helpcenter.HelpCenterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name=".ui.language.LanguageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name=".ui.security.SecurityActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name=".ui.notification.NotificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name=".ui.download.DownloadActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity"/>
+
+        <activity
+            android:name=".ui.editprofile.EditProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.accountsetup.AccountSetupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity">
+
+        </activity>
+        <activity
+            android:name=".ui.detail.DetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.home.HomeActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.MovieTime">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp.Splash"
+            tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ui.onboarding.OnboardingActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.home.movienowplaying.NowPlayingMoviesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.home.mylist.MyListActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.home.NotificationActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.home.tvseriesnowplaying.NowPlayingSeriesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MoviesApp"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.play.PlayActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.PlayerTheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/FACEBOOK_APP_ID" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="remove">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
     </application>
 
 </manifest>
