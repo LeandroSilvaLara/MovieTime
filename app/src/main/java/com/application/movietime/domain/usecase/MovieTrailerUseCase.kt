@@ -1,6 +1,12 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.mappers.toMovies
+import com.application.movietime.data.repository.MoviesRepository
+import com.application.movietime.data.repository.YoutubeRepository
+import com.application.movietime.domain.model.MovieTrailer
+import com.application.movietime.domain.model.MovieTrailerWithYoutube
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -9,7 +15,8 @@ interface MovieTrailerUseCase {
 }
 
 class GetMovieTrailerInteractor @Inject constructor(private val moviesRepository: MoviesRepository,
-                                                    private val youtubeRepository: YoutubeRepository): MovieTrailerUseCase {
+                                                    private val youtubeRepository: YoutubeRepository
+): MovieTrailerUseCase {
 
     private companion object {
         const val TAG = "GetMovieTrailerInteractor"

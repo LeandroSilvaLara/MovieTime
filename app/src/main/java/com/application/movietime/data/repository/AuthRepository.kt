@@ -1,5 +1,19 @@
 package com.application.movietime.data.repository
 
+import android.app.Activity
+import android.content.Context
+import com.application.movietime.data.common.Resource
+import com.google.firebase.auth.AuthResult
+import com.google.firebase.auth.FacebookAuthProvider
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.auth.OAuthProvider
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.tasks.await
+import timber.log.Timber
+import javax.inject.Inject
 
 interface AuthRepository {
     fun signIn(activity: Activity? = null, token: String? = null, email: String? = null, password: String? = null): Flow<Resource<AuthResult>>

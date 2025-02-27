@@ -1,6 +1,8 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.repository.LanguagePreferenceRepository
+import com.application.movietime.domain.model.LanguagePreference
 import kotlinx.coroutines.flow.Flow
 
 interface LanguageUseCase {

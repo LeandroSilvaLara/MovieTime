@@ -1,6 +1,8 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.local.entity.MovieDownloadEntity
+import com.application.movietime.data.repository.MoviesRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

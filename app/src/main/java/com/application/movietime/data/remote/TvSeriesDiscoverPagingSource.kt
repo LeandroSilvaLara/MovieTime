@@ -3,6 +3,8 @@ package com.application.movietime.data.remote
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.application.movietime.data.api.MoviesApi
+import com.application.movietime.data.api.response.TvSeriesDiscoverDto
 import javax.inject.Inject
 
 @OptIn(ExperimentalPagingApi::class)

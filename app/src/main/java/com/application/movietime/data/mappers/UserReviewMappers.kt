@@ -1,6 +1,7 @@
 package com.application.movietime.data.mappers
 
 import com.application.movietime.data.api.response.UserReviewDto
+import com.application.movietime.domain.model.UserReview
 
 fun UserReviewDto.Result.toDomain(): UserReview {
     return UserReview(

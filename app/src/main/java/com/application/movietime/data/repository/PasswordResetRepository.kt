@@ -1,5 +1,8 @@
 package com.application.movietime.data.repository
 
+import com.google.firebase.auth.FirebaseAuth
+import javax.inject.Inject
+
 interface PasswordResetRepository {
     suspend fun sendOtp(email: String)
 }

@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
 import com.application.moviesapp.R
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.repository.AuthRepository
 import com.google.android.gms.auth.api.identity.BeginSignInRequest
 import com.google.android.gms.auth.api.identity.Identity
 import com.google.android.gms.auth.api.identity.SignInClient

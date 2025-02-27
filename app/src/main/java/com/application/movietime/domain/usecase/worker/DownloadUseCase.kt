@@ -1,6 +1,9 @@
 package com.application.moviesapp.domain.usecase.worker
 
 
+import com.application.movietime.data.download.WorkManagerRepository
+import com.application.movietime.data.local.entity.MovieDownloadEntity
+import com.application.movietime.domain.model.Stream
 import javax.inject.Inject
 
 interface DownloadUseCase {

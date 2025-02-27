@@ -4,6 +4,7 @@ import timber.log.Timber
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.application.movietime.data.api.MoviesApi
+import com.application.movietime.data.api.response.UserReviewDto
 
 class MovieReviewPagingSource(private val moviesApi: MoviesApi, private val movieId: Int): PagingSource<Int, UserReviewDto.Result>() {
 

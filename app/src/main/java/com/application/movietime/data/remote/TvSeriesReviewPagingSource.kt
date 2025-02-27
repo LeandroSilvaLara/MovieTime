@@ -3,6 +3,8 @@ package com.application.movietime.data.remote
 import timber.log.Timber
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
+import com.application.movietime.data.api.MoviesApi
+import com.application.movietime.data.api.response.UserReviewDto
 
 class TvSeriesReviewPagingSource(private val moviesApi: MoviesApi, private val seriesId: Int): PagingSource<Int, UserReviewDto.Result>() {
 

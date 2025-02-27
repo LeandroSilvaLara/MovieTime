@@ -9,6 +9,7 @@ import com.application.movietime.data.api.MoviesApi
 import com.application.movietime.data.local.MoviesDatabase
 import com.application.movietime.data.local.entity.MovieUpcomingEntity
 import com.application.movietime.data.local.entity.MovieUpcomingRemoteKeyEntity
+import com.application.movietime.data.mappers.toMoviesEntity
 import retrofit2.HttpException
 import timber.log.Timber
 import java.io.IOException

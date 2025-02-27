@@ -1,6 +1,7 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.ui.signin.UserData
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch

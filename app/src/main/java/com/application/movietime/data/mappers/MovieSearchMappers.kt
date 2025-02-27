@@ -1,6 +1,7 @@
 package com.application.movietime.data.mappers
 
 import com.application.movietime.data.api.response.MovieSearchDto
+import com.application.movietime.domain.model.MovieSearch
 
 fun MovieSearchDto.Result.toMovie(): MovieSearch {
     return MovieSearch(

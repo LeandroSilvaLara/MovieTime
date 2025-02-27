@@ -1,6 +1,11 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.mappers.toMovieGenre
+import com.application.movietime.data.mappers.toMovies
+import com.application.movietime.data.repository.MoviesRepository
+import com.application.movietime.domain.model.MovieWithTvSeries
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.withContext

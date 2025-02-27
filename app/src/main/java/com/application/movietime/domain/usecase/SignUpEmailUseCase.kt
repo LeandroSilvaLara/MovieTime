@@ -1,6 +1,8 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.repository.AuthRepository
 import com.google.firebase.auth.AuthResult
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

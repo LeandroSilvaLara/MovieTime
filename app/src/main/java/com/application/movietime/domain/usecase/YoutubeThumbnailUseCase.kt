@@ -1,6 +1,10 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.mappers.toYoutubeThumbnail
+import com.application.movietime.data.repository.YoutubeRepository
+import com.application.movietime.domain.model.YoutubeThumbnail
 import timber.log.Timber
 import javax.inject.Inject
 

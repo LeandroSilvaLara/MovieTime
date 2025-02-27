@@ -1,6 +1,10 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.mappers.toMovies
+import com.application.movietime.data.repository.MoviesRepository
+import com.application.movietime.domain.model.MovieNowPlaying
 import timber.log.Timber
 import javax.inject.Inject
 

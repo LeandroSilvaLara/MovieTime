@@ -1,5 +1,11 @@
 package com.application.movietime.data.repository
 
+
+import com.application.movietime.data.api.YoutubeApi
+import com.application.movietime.data.api.response.YoutubeThumbnailDto
+import retrofit2.Response
+import javax.inject.Inject
+
 interface YoutubeRepository {
     suspend fun videoThumbnail(vararg part: String, id: String): Response<YoutubeThumbnailDto>
 }

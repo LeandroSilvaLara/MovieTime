@@ -1,5 +1,23 @@
 package com.application.movietime.data.mappers
 
+import com.application.movietime.data.api.response.MovieStateDto
+import com.application.movietime.data.api.response.MovieTrailerDto
+import com.application.movietime.data.api.response.TvSeriesDiscoverDto
+import com.application.movietime.data.local.entity.MovieNowPlayingEntity
+import com.application.movietime.data.local.entity.MovieUpcomingEntity
+import com.application.movietime.data.local.entity.MoviesEntity
+import com.application.movietime.data.remote.MovieFavouriteDto
+import com.application.movietime.data.remote.MovieNewReleasesDto
+import com.application.movietime.data.remote.MovieUpcomingDto
+import com.application.movietime.data.remote.MoviesDiscoverDto
+import com.application.movietime.domain.model.MovieFavourite
+import com.application.movietime.domain.model.MovieNowPlaying
+import com.application.movietime.domain.model.MovieState
+import com.application.movietime.domain.model.MovieTrailer
+import com.application.movietime.domain.model.MovieUpcoming
+import com.application.movietime.domain.model.MoviesDiscover
+import com.application.movietime.domain.model.TvSeriesDiscover
+
 
 fun MoviesDiscoverDto.Result.toMoviesEntity(): MoviesEntity {
     return MoviesEntity(

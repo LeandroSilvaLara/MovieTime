@@ -1,6 +1,10 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.mappers.toTvSeries
+import com.application.movietime.data.repository.MoviesRepository
+import com.application.movietime.domain.model.TvSeriesEpisodes
 import timber.log.Timber
 
 interface TvSeriesEpisodesUseCase {

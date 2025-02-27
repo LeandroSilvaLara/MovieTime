@@ -1,6 +1,8 @@
 package com.application.movietime.data.mappers
 
 import com.application.movietime.data.api.response.MovieNowPlayingDto
+import com.application.movietime.data.local.entity.MovieNowPlayingEntity
+import com.application.movietime.domain.model.MovieNowPlaying
 
 fun MovieNowPlayingDto.Result.toMovies(): MovieNowPlaying {
     return MovieNowPlaying(

@@ -1,6 +1,13 @@
 package com.application.movietime.data.mappers
 
 import com.application.movietime.data.api.response.CastDetailDto
+import com.application.movietime.data.api.response.CastImagesDto
+import com.application.movietime.data.api.response.CastMovieCreditsDto
+import com.application.movietime.data.api.response.CastTvSeriesCreditDto
+import com.application.movietime.domain.model.CastDetail
+import com.application.movietime.domain.model.CastImages
+import com.application.movietime.domain.model.CastMovieCredits
+import com.application.movietime.domain.model.CastTvSeriesCredit
 
 fun CastDetailDto.toDomain(): CastDetail {
     return CastDetail(

@@ -1,6 +1,7 @@
 package com.application.movietime.data.mappers
 
 import com.application.movietime.data.api.response.YoutubeThumbnailDto
+import com.application.movietime.domain.model.YoutubeThumbnail
 
 
 fun YoutubeThumbnailDto.toYoutubeThumbnail(): YoutubeThumbnail {

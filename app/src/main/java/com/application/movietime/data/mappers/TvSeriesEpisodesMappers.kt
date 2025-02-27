@@ -1,6 +1,7 @@
 package com.application.movietime.data.mappers
 
 import com.application.movietime.data.api.response.TvSeriesEpisodesDto
+import com.application.movietime.domain.model.TvSeriesEpisodes
 
 
 fun TvSeriesEpisodesDto.toTvSeries(): TvSeriesEpisodes {

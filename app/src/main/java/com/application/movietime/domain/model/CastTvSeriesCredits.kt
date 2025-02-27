@@ -1,6 +1,5 @@
 package com.application.movietime.domain.model
 
-
 data class CastTvSeriesCredit(
 
     val cast: List<Cast?>?,

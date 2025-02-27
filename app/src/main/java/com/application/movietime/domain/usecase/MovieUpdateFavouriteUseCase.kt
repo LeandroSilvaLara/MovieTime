@@ -1,6 +1,9 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.api.response.MovieUpdateFavouriteDto
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.repository.MoviesRepository
 import okhttp3.RequestBody
 import retrofit2.Response
 import timber.log.Timber

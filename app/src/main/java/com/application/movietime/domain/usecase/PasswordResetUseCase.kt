@@ -1,5 +1,6 @@
 package com.application.moviesapp.domain.usecase
 
+import com.application.movietime.data.repository.PasswordResetRepository
 import javax.inject.Inject
 
 interface PasswordResetUseCase {

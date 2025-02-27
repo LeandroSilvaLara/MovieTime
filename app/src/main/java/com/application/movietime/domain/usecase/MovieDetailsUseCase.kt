@@ -1,6 +1,9 @@
 package com.application.moviesapp.domain.usecase
 
 import android.graphics.Movie
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.repository.MoviesRepository
+import com.application.movietime.domain.model.MoviesDetail
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async

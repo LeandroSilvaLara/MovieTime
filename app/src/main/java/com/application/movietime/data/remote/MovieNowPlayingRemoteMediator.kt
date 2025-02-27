@@ -5,14 +5,21 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import androidx.room.withTransaction
+import com.application.movietime.data.api.MoviesApi
+import com.application.movietime.data.local.MoviesDatabase
+import com.application.movietime.data.local.entity.MovieNowPlayingEntity
+import com.application.movietime.data.local.entity.MovieNowPlayingRemoteKeyEntity
+import com.application.movietime.data.mappers.toMoviesEntity
 import retrofit2.HttpException
 import timber.log.Timber
 import java.io.IOException
 import javax.inject.Inject
 
+
 @ExperimentalPagingApi
 class MovieNowPlayingRemoteMediator @Inject constructor(private val moviesApi: MoviesApi,
-                                                        private val database: MoviesDatabase): RemoteMediator<Int, MovieNowPlayingEntity>() {
+                                                        private val database: MoviesDatabase
+): RemoteMediator<Int, MovieNowPlayingEntity>() {
 
     private companion object {
         const val TAG = "MoviesNowPlayingRemoteMediator"

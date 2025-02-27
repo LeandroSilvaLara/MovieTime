@@ -1,6 +1,8 @@
 package com.application.moviesapp.domain.usecase
 
 
+import com.application.movietime.data.repository.SettingsPreferenceRepository
+import com.application.movietime.domain.model.SettingsPreference
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

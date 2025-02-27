@@ -1,7 +1,11 @@
 package com.application.moviesapp.domain.usecase
 
 import android.net.Uri
-import com.application.moviesapp.UserPreferences
+import com.application.movietime.data.api.request.Member
+import com.application.movietime.data.common.Resource
+import com.application.movietime.data.repository.AccountSetupRepository
+import com.application.movietime.data.repository.UserPreferenceRepository
+import com.application.movietime.domain.model.MoviesDetail
 import com.google.firebase.storage.UploadTask
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
@@ -24,7 +28,8 @@ interface AccountSetupUseCase {
 }
 
 class GetAccountSetupInteractor @Inject constructor(private val repository: UserPreferenceRepository,
-                                                    private val accountSetupRepository: AccountSetupRepository): AccountSetupUseCase {
+                                                    private val accountSetupRepository: AccountSetupRepository
+): AccountSetupUseCase {
 
                                                         private companion object {
                                                             const val TAG = "GetAccountSetupInteractor"

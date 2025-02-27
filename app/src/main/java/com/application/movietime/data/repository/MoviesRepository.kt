@@ -1,6 +1,56 @@
 package com.application.movietime.data.repository
 
 
+import androidx.paging.ExperimentalPagingApi
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
+import com.application.movietime.data.api.MoviesApi
+import com.application.movietime.data.api.response.CastDetailDto
+import com.application.movietime.data.api.response.CastImagesDto
+import com.application.movietime.data.api.response.CastMovieCreditsDto
+import com.application.movietime.data.api.response.CastTvSeriesCreditDto
+import com.application.movietime.data.api.response.CountryResponse
+import com.application.movietime.data.api.response.MovieDetailsCastDto
+import com.application.movietime.data.api.response.MovieDetailsDto
+import com.application.movietime.data.api.response.MovieGenreResponse
+import com.application.movietime.data.api.response.MovieNowPlayingDto
+import com.application.movietime.data.api.response.MovieSearchDto
+import com.application.movietime.data.api.response.MovieSimpleResponse
+import com.application.movietime.data.api.response.MovieStateDto
+import com.application.movietime.data.api.response.MovieTopRatedResponse
+import com.application.movietime.data.api.response.MovieTrailerDto
+import com.application.movietime.data.api.response.MovieUpdateFavouriteDto
+import com.application.movietime.data.api.response.TvSeriesDetailsCastDto
+import com.application.movietime.data.api.response.TvSeriesDetailsDto
+import com.application.movietime.data.api.response.TvSeriesDiscoverDto
+import com.application.movietime.data.api.response.TvSeriesEpisodesDto
+import com.application.movietime.data.api.response.TvSeriesNowPlayingDto
+import com.application.movietime.data.api.response.TvSeriesSearchDto
+import com.application.movietime.data.api.response.TvSeriesTrailerDto
+import com.application.movietime.data.api.response.UserReviewDto
+import com.application.movietime.data.local.MoviesDatabase
+import com.application.movietime.data.local.entity.MovieDownloadEntity
+import com.application.movietime.data.remote.MovieFavouriteDto
+import com.application.movietime.data.remote.MovieFavouritePagingSource
+import com.application.movietime.data.remote.MovieNewReleasesDto
+import com.application.movietime.data.remote.MovieNowPlayingPagingSource
+import com.application.movietime.data.remote.MovieReviewPagingSource
+import com.application.movietime.data.remote.MovieSearchPagingSource
+import com.application.movietime.data.remote.MovieUpcomingDto
+import com.application.movietime.data.remote.MoviesDiscoverDto
+import com.application.movietime.data.remote.MoviesDiscoverPagingSource
+import com.application.movietime.data.remote.TvSeriesDiscoverPagingSource
+import com.application.movietime.data.remote.TvSeriesFavouriteDto
+import com.application.movietime.data.remote.TvSeriesFavouritePagingSource
+import com.application.movietime.data.remote.TvSeriesNowPlayingPagingSource
+import com.application.movietime.data.remote.TvSeriesReviewPagingSource
+import com.application.movietime.data.remote.TvSeriesSearchPagingSource
+import kotlinx.coroutines.flow.Flow
+import okhttp3.RequestBody
+import retrofit2.Response
+import javax.inject.Inject
+
 interface MoviesRepository {
     suspend fun getDiscoverMoviesList(page: Int = 1): Response<MoviesDiscoverDto>
 
@@ -81,7 +131,8 @@ interface MoviesRepository {
 
 @OptIn(ExperimentalPagingApi::class)
 class MoviesRepositoryImpl @Inject constructor(private val movies: MoviesApi,
-                                               private val database: MoviesDatabase): MoviesRepository {
+                                               private val database: MoviesDatabase
+): MoviesRepository {
 
     companion object {
         const val PAGE_SIZE = 20

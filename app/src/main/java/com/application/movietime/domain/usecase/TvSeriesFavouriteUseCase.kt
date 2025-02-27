@@ -2,6 +2,9 @@ package com.application.moviesapp.domain.usecase
 
 import androidx.paging.PagingData
 import androidx.paging.map
+import com.application.movietime.data.mappers.toDomain
+import com.application.movietime.data.repository.MoviesRepository
+import com.application.movietime.domain.model.TvSeriesFavourite
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
