@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
-        android:name=".MoviesApplication"
+        android:name="com.application.movietime.MoviesApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -19,7 +19,7 @@
         tools:targetApi="31">
 
         <service
-            android:name=".service.PushNotificationService"
+            android:name="com.application.movietime.service.PushNotificationService"
             android:exported="false">
             <intent-filter>
                 <action
@@ -30,7 +30,7 @@
 
 
         <activity
-            android:name=".ui.privacypolicy.PrivacyPolicyActivity"
+            android:name="com.application.movietime.ui.privacypolicy.PrivacyPolicyActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
@@ -44,21 +44,21 @@
             tools:ignore="LockedOrientationActivity"/>
 
         <activity
-            android:name=".ui.language.LanguageActivity"
+            android:name="com.application.movietime.ui.language.LanguageActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
             tools:ignore="LockedOrientationActivity"/>
 
         <activity
-            android:name=".ui.security.SecurityActivity"
+            android:name="com.application.movietime.ui.security.SecurityActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
             tools:ignore="LockedOrientationActivity"/>
 
         <activity
-            android:name=".ui.notification.NotificationActivity"
+            android:name="com.application.movietime.ui.notification.NotificationActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
@@ -79,7 +79,7 @@
             tools:ignore="LockedOrientationActivity" />
 
         <activity
-            android:name=".ui.accountsetup.AccountSetupActivity"
+            android:name="com.application.movietime.ui.accountsetup.AccountSetupActivity"
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
@@ -93,7 +93,7 @@
             android:theme="@style/Theme.MoviesApp"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.home.HomeActivity"
+            android:name="com.application.movietime.ui.home.HomeActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp.Splash"
@@ -105,42 +105,42 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.onboarding.OnboardingActivity"
+            android:name="com.application.movietime.ui.onboarding.OnboardingActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.home.movienowplaying.NowPlayingMoviesActivity"
+            android:name="com.application.movietime.ui.home.movienowplaying.NowPlayingMoviesActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.home.mylist.MyListActivity"
+            android:name="com.application.movietime.ui.home.mylist.MyListActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.home.NotificationActivity"
+            android:name="com.application.movietime.ui.home.NotificationActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.home.tvseriesnowplaying.NowPlayingSeriesActivity"
+            android:name="com.application.movietime.ui.home.tvseriesnowplaying.NowPlayingSeriesActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MoviesApp"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".ui.play.PlayActivity"
+            android:name="com.application.movietime.ui.play.PlayActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
